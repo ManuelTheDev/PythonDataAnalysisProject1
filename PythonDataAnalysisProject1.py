@@ -22,3 +22,9 @@ tax = 1.25
 
 def calculate_tax(num):
     return num * tax
+
+
+# Creating new dataframe grouping by a new column
+df_payments_grouped = df_payments.copy()
+df_payments_grouped = df_payments_grouped.groupby('id_client', as_index=False)
+df_payments_grouped = df_payments_grouped['revenue'].mean()
