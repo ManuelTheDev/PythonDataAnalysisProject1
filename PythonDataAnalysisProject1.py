@@ -28,3 +28,7 @@ def calculate_tax(num):
 df_payments_grouped = df_payments.copy()
 df_payments_grouped = df_payments_grouped.groupby('id_client', as_index=False)
 df_payments_grouped = df_payments_grouped['revenue'].mean()
+
+
+# Saving data in a new csv
+df_payments_grouped.to_csv(pwd + '/data_grouped.csv', index=False)
