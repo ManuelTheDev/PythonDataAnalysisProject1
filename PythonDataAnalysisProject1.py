@@ -13,3 +13,12 @@ df = pd.read_csv(pwd + '/data.csv')
 df_payments = df[df.id_client > 100]
 df_payments = df_payments[df_payments.id_cliente % 20 == 0]
 df_payments = df_payments[['id_cliente', 'revenue']]
+
+# Defining variable
+tax = 1.25
+
+# Defining function to calculate tax
+
+
+def calculate_tax(num):
+    return num * tax
